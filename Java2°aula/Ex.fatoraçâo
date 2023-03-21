@@ -1,0 +1,30 @@
+package aulaJava;
+
+public class exFatorial {
+
+	public static void main(String[] args) {
+		
+		
+		for(int n = 5; n<=12; n++) {
+			
+			int fato = 1;
+			
+		
+			for(int n1 = 1; n1<=n; n1++) {
+				
+				fato=fato*n1;
+				
+			}
+			
+			System.out.println(n+"! = "+fato);
+			
+			
+			
+			
+			
+		}
+		
+
+	}
+
+}
