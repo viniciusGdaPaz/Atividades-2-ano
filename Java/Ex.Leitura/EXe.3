@@ -1,1 +1,27 @@
+package javaprojectLeitura;
+
+import java.util.Scanner;
+
+public class Ex3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       for(int i=1;i<=5;i++) {
+    	System.out.println("----Pessoa:"+i+"----");   
+		Scanner leitor = new Scanner(System.in); 
+		System.out.println("informe o seu nome:");
+		String nome =leitor.nextLine();
+		
+		System.out.println("informe a seu peso em kg:");
+		float peso = Float.parseFloat(leitor.nextLine());
+		
+		System.out.println("informe a sua altura em metros:");
+		float altura = Float.parseFloat(leitor.nextLine());
+		
+		float imc = peso/(altura*altura);
+		System.out.println("o imc de " + nome +" é " + imc);
+       }
+	}
+
+}
 
