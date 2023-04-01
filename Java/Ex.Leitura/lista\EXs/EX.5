@@ -1,0 +1,27 @@
+public class MyClass {
+    
+    Import java.util.Scanner ;
+    
+    public static void main(String args[]) {
+        
+      int nn=0;
+      int np=0;
+      
+      do{
+          System.out.println("informe o numero");
+          Scanner leitor = new Scanner(System.in);
+          Integer n = Integer.parseInt(leitor.nextline());
+          
+          if(n>0){
+              np=np+n
+          }else{
+              nn=nn+n
+          }
+          
+      }while(!=0);
+      
+       System.out.println("numeros negativos : "+nn);
+       System.out.println("numeros positivos : "+np);
+      
+    }
+}
