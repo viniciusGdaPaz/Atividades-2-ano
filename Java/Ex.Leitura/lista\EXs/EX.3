@@ -4,25 +4,25 @@ public class MyClass {
     
     public static void main(String args[]) {
        
-       int media=0
+       int media=0;
        
       for(int i=0; i<=5; i++){
           System.out.println("informe o seu nome :  ");
           Scanner leitor = new Scanner(System.in);
-          String name=leitor.nextline();
+          String name=leitor.nextLine();
           
           System.out.println("informe a sua nota(1º bimestre): ");
-          Integer n1 = Integer.parseInt(leitor.nextline());
+          Integer n1 = Integer.parseInt(leitor.nextLine());
           
           System.out.println("informe a sua nota(2º bimestre): ");
-          Integer n2 = Integer.parseInt(leitor.nextline());
+          Integer n2 = Integer.parseInt(leitor.nextLine());
           
           media=(n1+n2)/2;
           
           if(media>=7){
-              System.out.printl("o aluno: "+name+" está aprovado; média: "+media);
+              System.out.println("o aluno: "+name+" está aprovado; média: "+media);
           }else{
-              System.out.printl("o aluno: "+name+" está reprovado; média: "+media);
+              System.out.println("o aluno: "+name+" está reprovado; média: "+media);
           }
           
           
