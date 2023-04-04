@@ -1,18 +1,26 @@
-public class MyClass {
-    
-    Import java.util.Scanner ;
-    
-    public static void main(String args[]) {
-       
-       int numeroA=5;
-       int valor=0;
-       for(int i=0; i<=numeroA; i++){
-          System.out.print("informe o valor que ira contribuir:");
-          Scanner leitor= new Scanner(System.in);
-          Integer valorC= Integer.parseInt(leitor.nextLine());
-          valor=valor+valorC;
-          
-       }
-       System.out.println("o valor arrecadado é : "+valor);
-    }
+package exercicios;
+
+import java.util.Scanner;
+
+public class Ex1 {
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		  
+	       int numeroA=5;
+	       int valor=0;
+	       for(int i=1; i<=numeroA; i++){
+	       System.out.println("==============Aluno"+i+"==============");
+	          System.out.print("informe o valor que ira contribuir:");
+	          Scanner leitor= new Scanner(System.in);
+	          Integer valorC= Integer.parseInt(leitor.nextLine());
+	          valor=valor+valorC;
+	          
+	       }
+	       System.out.println("o valor arrecadado é : "+valor);
+	}
+
 }
