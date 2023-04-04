@@ -1,26 +1,35 @@
-public class MyClass {
-    
-    Import java.util.Scanner ;
-    
-    public static void main(String args[]) {
-        
-        int ni=0
-        int np=0
-       
-     for(int i; i<=10; i++){
-         System.out.printl("infrome o numero: ");
-         Scanner leitor= new Scanner(System.in);
-         Integer n= Integer.parseInt(leitor.nextline())
-         
-         if(n%2==0){
-             np=np+1
-         }else{
-             ni=ni+1
-         }
-         
-     }
-     
-        System.out.pintln("numeros pares : "+np)
-        System.out.pintln("numeros impares : "+ni)
-    }
+package exercicios;
+
+import java.util.Scanner;
+
+public class Ex1 {
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+
+	
+	        
+	        int ni=0;
+	        int np=0;
+	       
+	     for(int i=1; i<=10; i++){
+	         System.out.println("infrome o numero: ");
+	         Scanner leitor = new Scanner(System.in);
+	         Integer n= Integer.parseInt(leitor.nextLine());
+	         
+	         if(n%2==0){
+	             np=np+1;
+	         }else{
+	             ni=ni+1;
+	         }
+	         
+	     }
+	     
+	        System.out.println("numeros pares : "+np);
+	        System.out.println("numeros impares : "+ni);
+	}
+
 }
