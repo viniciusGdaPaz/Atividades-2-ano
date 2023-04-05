@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de formatação de Documentos</title>
+</head>
+<body bgcolor="yellow" background="vetor.jpg">
+
+    <center><h1><Font face ="couvier"  color = "white">Pascoa </Font></h1> 
+    <hr>
+    <Font color = "black"> Páscoa é tempo de vida <br>
+    Páscoa é tempo de cor  <br>
+    Páscoa é festa Vivida, <br>
+    Na primavera em flor.  <br>
+    <br>
+    Comem-se amêndoas e ovos, <br>
+    A mãe prepara o folar, <br>
+    E o acbrito não falta, <br>
+    Na mesa, para o jantar. <br>
+    <br>
+    <p>align="center"
+    <b>Vamos viver a páscoa, </b></b><br>
+    <i>unidos em alegria, </i> <br>
+    <s>Fazendo de cada dia, </s> <br>
+    <u> Uma festa em harmonia. </u> <br>
+    </p>
+    <br>
+    <marquee> <tt> Estou me movendo!</tt></marquee> 
+
+
+ </Font>
+    <img   src="rabit.jpg" height="500" wight="550"></center>
+
+
+</body>
+</html>
