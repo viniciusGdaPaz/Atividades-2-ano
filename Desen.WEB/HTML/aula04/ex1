@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Exercicio 1</title>
+</head>
+<body>
+           <Font color ="black" size="1">C</Font>
+           <Font color ="orange" size="1.5">r</Font>
+           <Font color ="blue" size="2">e</Font> 
+           <Font color ="green" size="2.5">s</Font>
+           <Font color ="#98FB98" size="3">c</Font>
+           <Font color ="brown" size="3.5">e</Font>
+           <Font color ="orange" size="4">n</Font>
+           <Font color ="black" size="4.5">d</Font>
+           <Font color ="red" size="5">o</Font>
+           <br>
+           <hr>
+           <Font color ="black" size="6">D</Font>
+           <Font color ="orange" size="5.5">i</Font>
+           <Font color ="blue" size="5">m</Font> 
+           <Font color ="red" size="4.5">i</Font>
+           <Font color ="orange" size="4">n</Font>
+           <Font color ="black" size="3.5">u</Font>
+           <Font color ="#98FB98" size="3">i</Font>
+           <Font color ="black" size="2.5">n</Font>
+           <Font color ="orange" size="2">d</Font>
+           <Font color ="red" size="1.5">o</Font>
 
+
+
+    
+</body>
+</html>
