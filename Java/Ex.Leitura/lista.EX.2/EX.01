@@ -1,0 +1,25 @@
+package aulA05;
+
+import java.util.Scanner;
+
+public class lista01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		 int n = 0;
+	     
+		 Scanner leitor = new Scanner(System.in);
+		 
+		 System.out.print("escolha um numero : ");
+		 n= Integer.parseInt(leitor.nextLine());
+		 
+		 if(n>0) {
+			 System.out.println(n*2);
+		 }else {
+			 System.out.println(n*3);
+		 }
+		 
+	}
+
+}
