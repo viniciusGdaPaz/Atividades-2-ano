@@ -1,0 +1,61 @@
+package aulaOO;
+
+import java.util.Scanner;
+
+public class Retangulo {
+	int altura;
+    int base;
+    int num;
+    
+    Integer area(){
+    	return altura*base;
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leitor= new Scanner(System.in);
+		
+		Retangulo ret1= new Retangulo();
+		System.out.println("informe a aultura; ");
+		ret1.altura=Integer.parseInt(leitor.nextLine());
+		System.out.println("informe a base; ");
+		ret1.base=Integer.parseInt(leitor.nextLine());
+		System.out.println(ret1.area());
+		
+		
+		
+         Retangulo ret2= new Retangulo();
+         System.out.println("informe a aultura; ");
+		 ret2.altura=Integer.parseInt(leitor.nextLine());
+		 System.out.println("informe a base; ");
+		 ret2.base=Integer.parseInt(leitor.nextLine());
+		 System.out.println(ret2.area());
+
+         Retangulo ret3= new Retangulo();
+         System.out.println("informe a aultura; ");
+ 		 ret3.altura=Integer.parseInt(leitor.nextLine());
+ 		 System.out.println("informe a base; ");
+ 		 ret3.base=Integer.parseInt(leitor.nextLine());
+ 		 System.out.println(ret3.area());
+ 		 
+ 		Retangulo ret4= new Retangulo();
+        System.out.println("informe a aultura; ");
+		 ret4.altura=Integer.parseInt(leitor.nextLine());
+		 System.out.println("informe a base; ");
+		 ret4.base=Integer.parseInt(leitor.nextLine());
+		 System.out.println(ret4.area());
+		 
+		 
+		 Retangulo ret5= new Retangulo();
+         System.out.println("informe a aultura; ");
+ 		 ret5.altura=Integer.parseInt(leitor.nextLine());
+ 		 System.out.println("informe a base; ");
+ 		 ret5.base=Integer.parseInt(leitor.nextLine());
+		
+		 
+		 System.out.println(ret5.area());
+								  
+		
+	}
+
+}
