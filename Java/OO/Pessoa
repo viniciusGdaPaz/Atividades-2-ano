@@ -1,0 +1,40 @@
+package aulaOO;
+
+public class Pessoa {
+	
+	String nome;
+	String endereço;
+	String cidade;
+	int uf;
+	double altura;
+	
+	void falarOla() {
+		System.out.println("Olá mundo, sou "+nome+" !");
+	}
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Pessoa pes1 = new Pessoa();
+
+		pes1.nome = "Erik";
+		pes1.endereço ="Serrana";
+		pes1.cidade= "Foz do iguaçu";
+		pes1.uf= 41;
+		pes1.altura=1.75;
+		
+		Pessoa pes2 = new Pessoa();
+
+		pes2.nome = "Vini";
+		pes2.endereço ="Xavier da Silva";
+		pes2.cidade= "Foz do iguaçu";
+		pes2.uf= 41;
+		pes2.altura=1.72;
+		
+		pes1.falarOla();
+		pes2.falarOla();
+
+	}
+
+}
