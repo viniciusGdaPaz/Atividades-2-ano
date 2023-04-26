@@ -8,49 +8,185 @@
 </head>
 <body>
     
-      <table align="center" border="2">
+      <table align="center" border="2" Bordercolor="white" >
        <caption > Tabela Periodica</caption>
 
        <tbody>
-        <tr>
-            <td>H1</td>
+        <tr><!--linha1-->
+            <td bgcolor="orange">H1</td>
             <td colspan="16"></td>
-            <td>H1</td>
+            <td bgcolor="grey">H1</td>
                            
-         </tr>
-         <td>Li</td>
-         <td>Be</td>
-         <td colspan="10"></td>
-         <td>B</td>
-         <td>C</td>
-         <td>N</td>
-         <td>D</td>
-         <td>F</td>
-         <td>Ne</td>
+         </tr>><!--linha2-->
          <tr>
-            <tr>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
-                <td>12</td>
+         <td bgcolor="yellow">Li</td>
+         <td bgcolor="green">Be</td>
+         <td colspan="10"></td>
+         <td bgcolor="green">B</td>
+         <td bgcolor="orange">C</td>
+         <td bgcolor="orange">N</td>
+         <td bgcolor="orange">O</td>
+         <td bgcolor="pink">F</td>
+         <td bgcolor="grey">Ne</td>
+        </tr>
+
+         <tr>><!--linha3-->
+                <td bgcolor="yellow">Na</td>
+                <td bgcolor="green">Mg</td>
+                <td colspan="10"></td>
+                <td bgcolor="#add8e6">Al</td>
+                <td bgcolor="green">Si</td>
+                <td bgcolor="orange">P</td>
+                <td bgcolor="orange">S</td>
+                <td bgcolor="pink">Cl</td>
+                <td bgcolor="grey">Ar</td>
                 
             </tr>
-             
-         </tr>
+
+            <tr><!--linha4-->
+
+                <td bgcolor="yellow">K</td>
+                <td bgcolor="green">Ca</td>
+                <td bgcolor="blue">Sc</td>
+                <td bgcolor="blue">Ti</td>
+                <td bgcolor="blue">V</td>
+                <td bgcolor="blue">Cr</td>
+                <td bgcolor="blue">Mn</td>
+                <td bgcolor="blue">Fe</td>
+                <td bgcolor="blue">Co</td>
+                <td bgcolor="blue">Ni</td>
+                <td bgcolor="blue">Cu</td>
+                <td bgcolor="blue">Zn</td>
+                <td bgcolor="#add8e6">Ga</td>
+                <td bgcolor="green">Ge</td>
+                <td bgcolor="green">As</td>
+                <td bgcolor="orange">Se</td>
+                <td bgcolor="pink">Br</td>
+                <td bgcolor="grey">Kr</td>
+
+            </tr>
+
+            <tr><!--linha5-->
+
+                <td bgcolor="yellow">Rb</td>
+                <td bgcolor="green">Sr</td>
+                <td bgcolor="blue">Y</td>
+                <td bgcolor="blue">Zr</td>
+                <td bgcolor="blue">Nb</td>
+                <td bgcolor="blue">Mo</td>
+                <td bgcolor="blue">Tc</td>
+                <td bgcolor="blue">Ru</td>
+                <td bgcolor="blue">Rh</td>
+                <td bgcolor="blue">Pd</td>
+                <td bgcolor="blue">Ag</td>
+                <td bgcolor="blue">Cd</td>
+                <td bgcolor="#add8e6">In</td>
+                <td bgcolor="#add8e6">Sn</td>
+                <td bgcolor="green">Sb</td>
+                <td bgcolor="green">Te</td>
+                <td bgcolor="pink">I</td>
+                <td bgcolor="grey">Xe</td>
+
+            </tr>
+
+            <tr><!--linha6-->
+
+                <td bgcolor="yellow">Cs</td>
+                <td bgcolor="green">Ba</td>
+                <td bgcolor="white">6</td>
+                <td bgcolor="blue">Hf</td>
+                <td bgcolor="blue">Ta</td>
+                <td bgcolor="blue">W</td>
+                <td bgcolor="blue">Re</td>
+                <td bgcolor="blue">Os</td>
+                <td bgcolor="blue">Ir</td>
+                <td bgcolor="blue">Pt</td>
+                <td bgcolor="blue">Au</td>
+                <td bgcolor="blue">Hg</td>
+                <td bgcolor="#add8e6">Tl</td>
+                <td bgcolor="#add8e6">Pb</td>
+                <td bgcolor="#add8e6">Bi</td>
+                <td bgcolor="green">Po</td>
+                <td bgcolor="pink">At</td>
+                <td bgcolor="grey">Rn</td>
+
+            </tr>
+
+
+            <tr><!--linha7-->
+
+                <td bgcolor="yellow">Fr</td>
+                <td bgcolor="green">Ra</td>
+                <td bgcolor="white">7</td>
+                <td bgcolor="blue">Rf</td>
+                <td bgcolor="blue">Db</td>
+                <td bgcolor="blue">Sg</td>
+                <td bgcolor="blue">Bh</td>
+                <td bgcolor="blue">Hs</td>
+                <td bgcolor="blue">Mt</td>
+                <td bgcolor="blue">Ds</td>
+                <td bgcolor="blue">Rg</td>
+                <td bgcolor="blue">Cn</td>
+                <td bgcolor="#add8e6">Uut</td>
+                <td bgcolor="#add8e6">Uuq</td>
+                <td bgcolor="#add8e6">Uup</td>
+                <td bgcolor="#add8e6">Uuh</td>
+                <td bgcolor="pink">Uus</td>
+                <td bgcolor="grey">Uuo</td>
+
+            </tr>
+            <tr>
+                <td colspan="18"> <font color="white">HH</font></td>
+          
+            </tr>
+            
+            <tr><!--linha9-->
+
+                <td rowspan="2" colspan="2"></td>
+                
+                <td bgcolor="blue">La</td>
+                <td bgcolor="blue">Ce</td>
+                <td bgcolor="blue">Pr</td>
+                <td bgcolor="blue">Nd</td>
+                <td bgcolor="blue">Pm</td>
+                <td bgcolor="blue">Sm</td>
+                <td bgcolor="blue">Eu</td>
+                <td bgcolor="blue">Gd</td>
+                <td bgcolor="blue">Tb</td>
+                <td bgcolor="blue">Dy</td>
+                <td bgcolor="blue">Ho</td>
+                <td bgcolor="blue">Er</td>
+                <td bgcolor="blue">Tm</td>
+                <td bgcolor="blue">Yb</td>
+                <td bgcolor="blue">Lu</td>
+                <td rowspan="2"></td>
+                
+
+            </tr>
+
+            <tr><!--linha10-->
+
+                
+                <td bgcolor="purple">Ac</td>
+                <td bgcolor="purple">Th</td>
+                <td bgcolor="purple">Pa</td>
+                <td bgcolor="purple">U</td>
+                <td bgcolor="purple">Np</td>
+                <td bgcolor="purple">Pu</td>
+                <td bgcolor="purple">Am</td>
+                <td bgcolor="purple">Cm</td>
+                <td bgcolor="purple">Bk</td>
+                <td bgcolor="purple">Cf</td>
+                <td bgcolor="purple">Es</td>
+                <td bgcolor="purple">Fm</td>
+                <td bgcolor="purple">Md</td>
+                <td bgcolor="purple">No</td>
+                <td bgcolor="purple">Lr</td>
+                
+                
+
+            </tr>
+
 
         
 
