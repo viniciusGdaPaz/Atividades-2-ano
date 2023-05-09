@@ -9,12 +9,12 @@ public class Execucao {
 			fun1.Apresentacao();
 			
 			
-			Funcionario fun2 = new Funcionario("Pedrinho", "Gomes", "vendedor", 3000);
+			Funcionario fun2 = new Funcionario("Arthur", "Lorenzo", "atendente", 3000);
 			
 			fun2.Apresentacao();
 
 			
-			Funcionario fun3 = new Funcionario("João", "Pedro", "empacotador", 2500);
+			Funcionario fun3 = new Funcionario("João", "Vitor", "vendedor", 2500);
 			
 			fun3.Apresentacao();
 
