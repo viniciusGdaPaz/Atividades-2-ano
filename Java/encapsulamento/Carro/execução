@@ -1,0 +1,85 @@
+package modelo;
+import java.util.Scanner;
+
+import Carro.modelo;
+
+public class Execucao {
+
+	public static void main(String[] args) {
+		Carro car1 = new Carro();
+		
+		Scanner leitor = new Scanner(System.in);
+		System.out.println("qual o nome do modelo (car1)= ");
+        car1.setModelo(leitor.nextLine()); 
+        System.out.println("qual o nome da marca(car1) = ");
+        car1.setMarca(leitor.nextLine()); 
+        System.out.println("qual o ano de fabricação(car1) = ");
+        car1.setAnoFabricacao(Integer.parseInt(leitor.nextLine())); 
+        System.out.println("qual a velocidade maxima(car1) = ");
+        car1.setVelocidade(Integer.parseInt(leitor.nextLine())); 
+        
+        Carro car2 = new Carro();
+		
+		
+		System.out.println("qual o nome do modelo(car2) = ");
+        car2.setModelo(leitor.nextLine()); 
+        System.out.println("qual o nome da marca(car2) = ");
+        car2.setMarca(leitor.nextLine()); 
+        System.out.println("qual o ano de fabricação(car2) = ");
+        car2.setAnoFabricacao(Integer.parseInt(leitor.nextLine())); 
+        System.out.println("qual a velocidade maxima(car2) = ");
+        car2.setVelocidade(Integer.parseInt(leitor.nextLine())); 
+        
+        
+         Carro car3 = new Carro();
+		
+		
+		System.out.println("qual o nome do modelo(car3) = ");
+        car3.setModelo(leitor.nextLine()); 
+        System.out.println("qual o nome da marca(car3) = ");
+        car3.setMarca(leitor.nextLine()); 
+        System.out.println("qual o ano de fabricação(car3) = ");
+        car3.setAnoFabricacao(Integer.parseInt(leitor.nextLine())); 
+        System.out.println("qual a velocidade maxima(car3) = ");
+        car3.setVelocidade(Integer.parseInt(leitor.nextLine())); 
+        
+        
+        if(car1.getVelocidade()>car2.getVelocidade() && car1.getVelocidade()>car3.getVelocidade() ){
+        	car1.carroMR();
+        	if(car2.getVelocidade()>car3.getVelocidade()){
+        		car3.carroMD();
+        	}else {
+        		car2.carroMD();
+        	}
+        }
+
+        if(car2.getVelocidade()>car1.getVelocidade() && car2.getVelocidade()>car3.getVelocidade() ){
+        	car2.carroMR();
+        	if(car1.getVelocidade()>car3.getVelocidade()){
+        		car3.carroMD();
+        	}else {
+        		car1.carroMD();
+        	}
+        }
+        
+        if(car3.getVelocidade()>car1.getVelocidade() && car3.getVelocidade()>car2.getVelocidade() ){
+        	car3.carroMR();
+        	if(car1.getVelocidade()>car2.getVelocidade()){
+        		car2.carroMD();
+        	}else {
+        		car1.carroMD();
+        	}
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        leitor.close();
+	}
+
+}
