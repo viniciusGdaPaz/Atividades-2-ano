@@ -1,0 +1,57 @@
+package modelo;
+
+public class funcionario {
+	
+	//atributos
+	private String primeiroNome;
+	private String sobrenome;
+	private String cargo;
+	private float salarioMensal;
+	
+	//constructor
+	  funcionario(String pN, String s, String c, float sM) {
+		primeiroNome=pN;
+		sobrenome=s;
+		cargo=c;
+		salarioMensal=sM;
+		 
+	 }
+		
+	public String getPrimeiroNome() {
+		return primeiroNome;
+	}
+
+	public void setPrimeiroNome(String primeiroNome) {
+		this.primeiroNome = primeiroNome;
+	}
+
+	public String getSobrenome() {
+		return sobrenome;
+	}
+
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+
+	public float getSalarioMensal() {
+		return salarioMensal;
+	}
+
+	public void setSalarioMensal(float salarioMensal) {
+		this.salarioMensal = salarioMensal;
+	}
+
+	//metodos
+	public void apresenta(){
+		System.out.println("O funcionário "+primeiroNome+" "+sobrenome+ " cargo "+cargo+"  recebe um salário anual de R$"+ 12*salarioMensal);
+	}
+
+}
