@@ -1,0 +1,20 @@
+package modelo;
+import funcionario.modelo;
+public class Execucao {
+
+	public static void main(String[] args) {
+		
+		funcionario fun1=new funcionario("vinicius","da Paz","atendente",1220);
+		fun1.apresenta();
+		
+
+		funcionario fun2=new funcionario("joao","Arthur","gerente",1570);
+		fun2.apresenta();
+		
+
+		funcionario fun3=new funcionario("Erik","Paulino","sub-gerente",1350);
+		fun3.apresenta();
+		
+	}
+
+}
