@@ -9,19 +9,22 @@ public class Funcionario {
 		private float salarioMensal;
 		
 		//Construtor
-		Funcionario(String pN, String sN, String c, float sM){
-			primeiroNome = pN;
-			sobreNome = sN;
-			cargo = c;
-			salarioMensal = sM;
+		Funcionario(String prNo, String soNo, String ca, float saMe){
+			primeiroNome = prNo;
+			sobreNome = soNo;
+			cargo = ca;
+			salarioMensal = saMe;
 		}
 		
 		//Métodos
 		public void Apresentacao(){
-			System.out.println("O funcionário "+primeiroNome +" "+sobreNome+", cargo "+cargo+", recebe um salário anual de R$"+salarioMensal);
+			System.out.println("O funcionário "+primeiroNome +" "+sobreNome+", cargo "+cargo+", recebe um salário anual de R$"+salarioAnual());
 		}
-  
-    //GETs e SETs
+		
+		public float salarioAnual(){
+			return(salarioMensal*12);
+		}
+
 		public String getPrimeiroNome() {
 			return primeiroNome;
 		}
