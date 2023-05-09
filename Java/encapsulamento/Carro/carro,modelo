@@ -48,7 +48,7 @@ public class Carro {
        
 
        public void carroMD() {
-    	   System.out.println("O carro mais rapido é "+modelo+"-"+marca+" fabricado em "+anoFabricacao+" com velocidade maxíma de "+velocidade+" km/h" );
+    	   System.out.println("O carro mais devagar é "+modelo+"-"+marca+" fabricado em "+anoFabricacao+" com velocidade maxíma de "+velocidade+" km/h" );
        }
        
        
