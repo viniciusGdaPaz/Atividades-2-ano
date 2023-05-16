@@ -1,0 +1,52 @@
+package modelo;
+
+public class Calculadora {
+
+ //atributos	
+ private int numA;
+ private int numB;
+ 
+ //metodos
+  public int soma() {
+	  int soma=this.numA+this.numB;
+			  return soma;
+  }
+  
+  public int subtracao() {
+	  int sub=this.numA-this.numB;
+			  return sub;
+  }
+  
+  public int divisao() {
+	  int div=this.numA/this.numB;
+			  return div;
+  }
+  
+  public int multiplicacao() {
+	  int multi=this.numA+this.numB;
+			  return multi;
+  }
+  
+  public int resto() {
+	  int res=this.numA%this.numB;
+	  return res;
+  }
+ 
+ 
+ //Gets e Sets
+public int getNumA() {
+	return numA;
+}
+public void setNumA(int numA) {
+	this.numA = numA;
+}
+public int getNumB() {
+	return numB;
+}
+public void setNumB(int numB) {
+	this.numB = numB;
+}
+  
+ 
+
+}
