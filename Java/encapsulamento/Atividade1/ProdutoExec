@@ -1,0 +1,42 @@
+package execucao;
+
+import java.util.Scanner;
+
+import modelo.Produto;
+
+public class ProdutoExec {
+
+	public static void main(String[] args) {
+		
+		Scanner leitor = new Scanner(System.in);
+		
+		Produto f1 = new Produto();
+		f1.setValorUnitario(0);
+		
+		for(int i=1;i<5;i++) {
+			Produto f = new Produto();
+			
+			System.out.println("----------PRODUTO "+i+"----------");
+			System.out.println("informe a descrição do produto:");
+			f.setDescricao(leitor.nextLine());
+			System.out.println("informe a unidade de medida do produto:");
+			f.setUnidadeMedida(leitor.nextLine());
+			System.out.println("informe a quantidade do produto:");
+			f.setQuantidade(Integer.parseInt(leitor.nextLine()));
+			System.out.println("informe o valor unitario do produto:");
+			f.setValorUnitario(Float.parseFloat(leitor.nextLine()));
+			
+		System.out.println("Produto = "+f.getDescricao()+"("+f.getUnidadeMedida()+")| "
+				+ "Quantidade("+f.getQuantidade()+") X valor-unitario( "+f.getValorUnitarios()
+				+") | valor-total ="+f.getValorTotal()+" reais \n");	
+				
+		if(f.getValorUnitarios() > f1.getValorUnitarios()) {
+			f1.setValorUnitario(f.getValorUnitarios());
+			f1.setDescricao(f.getDescricao());
+		}
+		
+		}
+		System.out.println("o produto coim maior valor é ="+f1.getDescricao()+"\n preço= "+f1.getValorUnitarios());
+	}
+
+}
