@@ -1,0 +1,29 @@
+package execucao;
+
+import java.util.Scanner;
+
+import modelo.Calculadora;
+
+public class CalculadoraExec {
+
+	public static void main(String[] args) {
+       
+		Scanner leitor=new Scanner(System.in);
+		
+		Calculadora c = new Calculadora();
+		
+		System.out.print("escolha o numA=");
+		c.setNumA(Integer.parseInt(leitor.nextLine()));
+		System.out.print("escolha o numB=");
+		c.setNumB(Integer.parseInt(leitor.nextLine()));
+		
+		System.out.println("\nNúmeros lidos: numA="+c.getNumA()+" numB="+c.getNumB()+
+				            "\nsaida;\n"
+				            + "soma="+c.soma()+
+				            "\nsubtração="+c.subtracao()+"\n"
+				            		+ "divisão="+c.divisao()+"\n"
+				            				+ "multiplicação="+c.multiplicacao()+"\n"
+				            						+ "resto="+c.resto());
+	}
+
+}
