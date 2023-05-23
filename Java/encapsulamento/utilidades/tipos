@@ -1,0 +1,66 @@
+package execucao;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+
+import modelo.metodo;
+
+public class TiposExec {
+
+	public static void main(String[] args) {
+		
+	  
+		String nome="Vinicius";
+		Integer quantidade=10;
+		Double valor=200.35;
+		
+		String texto="O cliente %s comprou %d unidades no valor %.2f.";
+		
+		String num="10";
+		Integer numInt = Integer.parseInt(num);		
+		
+		System.out.println(String.format(texto, nome , quantidade , valor));
+		
+		
+		metodo s1 = new metodo();
+		s1.imprime("consegui");
+
+		metodo.imprime2("consegui");
+		
+		
+		
+		List<Integer> lista = new ArrayList<>();
+		lista.add(10);
+		lista.add(45);
+		
+		Integer valo = 200;
+		lista.add(valo);
+		
+		lista.add(4);
+		lista.add(65);
+		lista.remove(0);
+		lista.sort(Comparator.naturalOrder());
+		
+		System.out.println(lista.get(2));//3º posição da lista
+		
+		for(int i=0; i<lista.size();i++) {
+			System.out.println(lista.get(i));
+		}
+		
+		System.out.println("foreach");
+		for(Integer num : lista) {
+			System.out.println(num);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
