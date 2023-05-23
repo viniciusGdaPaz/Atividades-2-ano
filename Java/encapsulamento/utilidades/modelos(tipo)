@@ -1,0 +1,13 @@
+package modelo;
+
+public class metodo {
+
+	
+	public void imprime(String valor) {
+		System.out.println(valor);
+	}
+	
+	public static void imprime2(String valor) {
+		System.out.println(valor);
+	}
+}
