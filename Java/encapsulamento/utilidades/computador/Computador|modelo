@@ -1,0 +1,37 @@
+package modelo;
+
+public class Computador {
+
+	//atributos
+	
+	private String processador;
+	private String memória;
+	private Float preco;
+	
+	
+	
+	
+	
+	//gets and sets
+	
+	public String getProcessador() {
+		return processador;
+	}
+	public void setProcessador(String processador) {
+		this.processador = processador;
+	}
+	public String getMemória() {
+		return memória;
+	}
+	public void setMemória(String memória) {
+		this.memória = memória;
+	}
+	public Float getPreco() {
+		return preco;
+	}
+	public void setPreco(Float preco) {
+		this.preco = preco;
+	}
+	
+	
+	
