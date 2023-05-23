@@ -13,7 +13,7 @@ public class ProdutoExec {
 		Produto f1 = new Produto();
 		f1.setValorUnitario(0);
 		
-		for(int i=1;i<5;i++) {
+		for(int i=1;i<3;i++) {
 			Produto f = new Produto();
 			
 			System.out.println("----------PRODUTO "+i+"----------");
@@ -33,10 +33,11 @@ public class ProdutoExec {
 		if(f.getValorUnitarios() > f1.getValorUnitarios()) {
 			f1.setValorUnitario(f.getValorUnitarios());
 			f1.setDescricao(f.getDescricao());
+			f1.setUnidadeMedida(f.getUnidadeMedida());
 		}
 		
 		}
-		System.out.println("o produto coim maior valor é ="+f1.getDescricao()+"\n preço= "+f1.getValorUnitarios());
+		System.out.println("o produto coim maior valor é ="+f1.getDescricao()+"\n unidade de medida= "+f1.getUnidadeMedida());
 	}
-
+		
 }
