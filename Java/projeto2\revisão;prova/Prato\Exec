@@ -1,0 +1,53 @@
+package execucao;
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import modelo.Computador;
+import modelo.Prato;
+
+public class PratoExec {
+
+	public static void main(String[] args) {
+		Scanner leitor = new Scanner(System.in);
+	    List<Prato> Lista = new ArrayList<>();
+
+        
+        for(int i=1 ; i<=3 ; i++) {
+        Prato pr = new Prato();
+        System.out.println("------Prato("+i+")------");
+        System.out.println("informe a descrição : ");
+        pr.setDescricao(leitor.nextLine());
+        System.out.println("informe a quantidade :");
+        pr.setQuantidade(Integer.parseInt(leitor.nextLine()));
+        System.out.println("informe o valor do prato :");
+        pr.setValorUnitario(Double.parseDouble(leitor.nextLine()));
+        System.out.println("\n");
+        
+        Lista.add(pr);
+        
+        }
+        
+			
+		leitor.close();
+		
+		System.out.println("-----Pratos Cadastrados-----");
+		for(Prato pt : Lista) {
+			System.out.println("\n------Prato("+ (Lista.indexOf(pt)+1)+"------" );
+			System.out.println(" descrição :"+ pt.getDescricao());
+			System.out.println(" quantidade : "+ pt.getQuantidade());
+			System.out.println(" valor unitario: "+ pt.getValorUnitario());
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+	
+	}
+}
