@@ -7,25 +7,13 @@ public class Prato {
  private Double valorUnitario;
  
  
+ //metodo
+ public Double getValorTotal() {
+	 Double vt = this.valorUnitario*this.quantidade;
+	 return vt;
+ }
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
  
  
  //gets and sets
