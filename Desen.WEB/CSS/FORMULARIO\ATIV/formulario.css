@@ -7,7 +7,7 @@ body{
 fieldset{
     text-align: center;
     margin: 0 auto;
-    height: 850px;
+    height: 880px;
     width: 1600px;
     border: 10px solid royalblue;
     border-radius: 10px;
@@ -36,5 +36,5 @@ input[type="reset"]{
     background-color: black;
 }
 input[type="text"]{
-    width: 400px;
+    width: 250px;
 }
