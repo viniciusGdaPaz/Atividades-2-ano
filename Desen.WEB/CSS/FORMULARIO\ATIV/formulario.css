@@ -1,0 +1,40 @@
+body{
+    background-color: aqua;
+    font-style: italic;
+    
+}
+
+fieldset{
+    text-align: center;
+    margin: 0 auto;
+    height: 850px;
+    width: 1600px;
+    border: 10px solid royalblue;
+    border-radius: 10px;
+     background-color:white;
+}
+
+input{
+ background-color: rgb(79, 169, 230);
+ border-radius: 10px;
+ color:white;
+
+}
+legend{
+    font-size: larger;
+    font-style: italic;
+}
+::placeholder{
+    color: aliceblue;
+}
+input[type="submit"]{
+    color: chartreuse;
+    background-color: blue;
+}
+input[type="reset"]{
+    color: red;
+    background-color: black;
+}
+input[type="text"]{
+    width: 400px;
+}
