@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Cadastro</title>
+    <link rel="stylesheet" href="formularioExemplo.css">
+</head>
+<body>
+    <form name="FormCadastro" action="" method="post"></form>
+        <center><legend>Cadastro do Cliente:</legend></center> 
+     <fieldset>
+
+       
+        <div>
+            <label for="Data">Data</label>
+            <input type="date" name="Data"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                           
+
+            <label for="fagente">Agente/Nome do Representante:</label>
+            <input type="text" name="fagente" placeholder="Seu nome"/>
+            <br>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="fnome">Nome do cliente:</label> 
+            <input type="text" name="fnome" placeholder="Seu nome"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="fempresa">Nome da Organização/Empresa do Cliente</label>
+            <input type="text" name="fempresa" placeholder="Nome da empresa">
+            <br>
+        </div>
+
+        <br>
+        <hr>
+        <b><p>informações do cliente</p></b>
+        <hr>
+      
+       <div> 
+        <label for="teleresidencial"> Telefone Residencial:</label>
+        <input type="text" name="teleresidencial" placeholder="   xx+ (xx) xxxxxxxx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+         <label for="celular" > Celular</label>
+         <input type="text" name="celular" placeholder="xx+ (xx) xxxxxxxx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+         <label for="email">Endereço de Email</label>
+         <input type="text" name="email" placeholder=" coloque seu email">
+       </div>
+
+
+         <br>
+
+         <div>
+            <label for="endereço">Endereço </label>
+         <input type="text" name="endereço" placeholder=" coloque seu endereço">
+
+         </div>
+
+         <br>
+
+         <div>
+         <label for="cidade">Cidade</label>
+         <input type="text" name="cidade" placeholder=" coloque o nome da sua cidade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         
+          
+         <label for="estado">Estado</label>
+         <input type="text" name="estado" placeholder=" coloque o nome do seu estado">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+         <label for="cep">CEP</label>
+         <input type="text" name="cep" placeholder=" coloque o CEP">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+
+         <br>
+
+        <div>
+            <label for="fCPF">CPF :</label>
+            <input type="text" name="fCPF" placeholder=" xxx.xxx.xxx-xx"/>
+            <br>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="fRG"> RG :</label>
+            <input type="text" name="fRG" placeholder="  x.xxx.xxx"/>
+            <br>
+         </div>
+
+         <br>
+         <div>
+
+            <label for="estado">Estado civil:</label><br>
+             <input type="radio" name="estado" value="solteiro"/> Solteiro
+               <input type="radio" name="estado" value="casado"/> Casado
+            <br>
+         </div>
+
+         <br>
+
+        <div>
+            <label for="fsexo">Sexo:</label><br>
+            Femenino <input type="radio" name="fsexo" value="feminino"/> Feminino
+            Masculino <input type="radio" name="fsexo" value="masculino"/> Masculino
+            <br>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="dataDeNasmento">Data de Nascimento</label>
+            <input type="date" name="dataDeNascimento"/>
+            <br>
+        </div>
+
+        <br>
+
+        <div>
+            <label >Raça:</label><br>
+            <input type="checkbox" name="branco" value="branco"/>branco
+            <input type="checkbox" name="preto" value="preto"/>Preto
+            <input type="checkbox" name="pardo" value="pardo"/>Pardo
+            <input type="checkbox" name="indigena" value="indigena"/>Indigena
+             <br>
+                        
+        </div>
+
+        <br>
+
+        <div>
+            <input type="submit" value="Enviar" name="cadastrar"/>
+            <input type="reset" value="Limpar" name="limpar">
+        </div>
+
+
+     </fieldset>
+
+
+
+
+
+
+
+
+    </form>
+</body>
+</html>
