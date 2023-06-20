@@ -1,0 +1,39 @@
+package modelo;
+
+public class Circulo {
+
+	
+	private Integer raio;
+	
+	//metodos
+	public Double getArea() {
+		Double area = this.raio*this.raio*3.14;
+		return area;
+	}
+	public Integer getDiametro() {
+		Integer area = this.raio + this.raio;
+		return area;
+	}
+	
+	public String getDados() {
+		String dados= "Raio: "+  this.raio +"cm";
+		       dados+="Area: "+ this.getArea();
+		       dados+="Diametro"+ this.getDiametro() + "cm";
+		       return dados;
+	}
+	
+//gets and sets
+
+	public Integer getRaio() {
+		return raio;
+	}
+
+	public void setRaio(Integer raio) {
+		this.raio = raio;
+	}
+	
+	
+
+	
+	
+}
