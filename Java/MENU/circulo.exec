@@ -1,0 +1,111 @@
+package execucao;
+
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import modelo.Circulo;
+
+public class CirculoExec {
+
+	public static void main(String[] args) {
+		Integer opcao;
+        Scanner leitor = new Scanner(System.in);
+        
+        
+        List<Circulo> lista = new ArrayList<>();
+        
+        
+		do {
+			
+			System.out.println("----------Cadastro de Circulo----------");
+			System.out.println("Opções:");
+			System.out.println("(1) Cadastrar");
+			System.out.println("(2) Listar");
+			System.out.println("(3) Excluir");
+			System.out.println("(4) Excluir Todos");
+			System.out.println("(0) Sair do programa");
+			
+			System.out.println("\nDigite a opção ");
+			opcao = Integer.parseInt(leitor.nextLine());
+			
+			
+		switch(opcao) {
+		case 1:
+			System.out.println("\nCadastro de Circulos");
+			
+			Circulo circulo = new Circulo();
+			
+			System.out.println("informe o raio(cm): ");
+			Integer raio = Integer.parseInt(leitor.nextLine());
+			circulo.setRaio(raio);
+			lista.add(circulo);
+			
+			
+			
+			
+			
+			
+			break;
+			
+	//-------------------------------------------------------------------------------		
+		case 2:
+			System.out.println("Listagem de Circulos Cadastrados");
+			
+			for( Circulo c : lista) {
+				System.out.println( c.getDados());
+			}
+			
+			
+			break;
+			
+	//-------------------------------------------------------------------------------
+		case 3:
+			System.out.println();
+			System.out.println("Exclusão de circulo");
+			
+			System.out.println("informe o índice a excluir até "+(lista.size())+": ");
+			Integer indice = Integer.parseInt(leitor.nextLine());
+			if(indice<= lista.size()) {
+				lista.remove(indice.intValue());
+			}else
+				System.out.println("índice não encontrado");
+		
+			
+			
+			
+			
+			break;
+	//-------------------------------------------------------------------------------	
+			
+		case 4:
+			System.out.println();
+			System.out.println("Exclusão de todos os itens: ");
+			
+			while(lista.size() > 0) {
+				lista.remove(0);
+			}
+	    break;		
+			
+	//-------------------------------------------------------------------------------
+			
+		case 0:
+			System.out.println("FIM DO PROGRAMA");
+			
+			
+  //-------------------------------------------------------------------------------			
+		default :
+			System.out.println("opção invalida");
+		    break;
+		
+		
+		}
+			
+			
+			
+		}while(opcao != 0);
+		
+	}
+
+}
