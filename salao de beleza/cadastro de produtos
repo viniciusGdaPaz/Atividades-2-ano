@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Contato - Barbearia </title>
+
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<div class="caixa">
+				<h1><img src="logo.png" alt="Logo da Barbearia "></h1>
+
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+						
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<form method="post" action="">
+				<label> Nome do produto: </label>
+				<input type="text" name="nomeProduto"
+				placeholder="Informe o nome do produto:" class="input-padrao" required>
+				<label> Marca: </label>
+				<input type="text" name="marca"  placeholder="Informe a Marca"
+				class="input-padrao" required>
+                   
+                 
+
+				<label >Genero:</label>
+				 <input type="radio" name="genero" value="Female" checked>Feminino
+				 <input type="radio" name="genero" value="Male">Masculine <br>
+
+                    
+
+				 <label for="Unidade">Unidade:</label>
+				 <input type="number" name="unidade" class="input-padrao">
+
+				 <label for="precoCusto"> Preço Custo:</label>
+				 <input type="text" name="precoCusto" class="input-padrao">
+
+
+				 <label for="fornecedor"> Fornecedor:</label>
+				 <input type="text" name="fornecedor" class="input-padrao">
+
+				 <label for="colecao"> Coleção:</label>
+                 <select class="input-padrao">
+					<option value="acessorios">Acessorios</option>
+					<option value="roupas">Roupas</option>
+					<option value="limpexaPele">Limpeza da pele</option>
+					<option value="banho">Banho</option>
+					<option value="maquiagem">Maquiagem</option>
+				 </select>
+				 <label for="descricao"> Descricao</label>
+				 <textarea  cols="70" rows="10" maxlength="1000"></textarea>
+				 <button type="button" name="Enviar" class="botao"> Salvar</button>
+
+                 
+
+
+
+
+			</form>
+		</main>
