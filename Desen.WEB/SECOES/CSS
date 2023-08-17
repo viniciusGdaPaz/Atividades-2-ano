@@ -1,0 +1,45 @@
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    }
+
+
+
+section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+
+    }
+
+    b{
+        color: red;
+    }
+
+    h2{
+        color:red;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+aside {
+    float: right;
+    
+    width: 25%;
+    background-color: #f4f4f4;
+    padding: 10px;
+
+
+    }
+    footer {
+    background-color: rgba(32, 10, 8, 0.979);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+    bottom: 0;
+    width: 100%;
+    }
