@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page.css">
+    <title>Document</title>
+</head>
+<body bgcolor="black">
+    
+<header>
+
+    <h1>10-Placas de Trãnsito</h1>
+
+</header>
+
+<nav>
+
+    <ul>
+        <li><a href="https://blog.usezapay.com.br/veiculo/placas-de-transito">Sobre</a></li>
+    </ul>
+</nav>
+
+<article>
+ 
+    <section>
+        <div style="text-align: center;">
+            <h2>1° Placa</h2>
+            <img src="parda.png" height="200px" width="300px"  ><h1> A <b >placa de Parada obrigatória</b>  diz respeito às situações as quais a parada de veículos é necessária, sendo insuficiente ou perigosa a simples redução de velocidade. </h1>
+        </div>
+       
+    </section>
+
+    <section>
+        <div style="text-align: center;">
+            <h2>2° Placa</h2>
+            <img src="preferencia.png" height="200px" width="200px"  ><h1> A <b >placa Dê a preferência</b>  assinala ao condutor a obrigatoriedade de dar preferência de passagem ao veículo que circula na via em que vai entrar ou cruzar, devendo para tanto reduzir a velocidade ou parar seu veículo, se necessário. </h1>
+        </div>
+       
+    </section>
+
+    <section>
+        <div style="text-align: center;">
+            <h2>3° Placa</h2>
+            <img src="sentidoproibido.png" height="200px" width="300px"  ><h1> A <b >placa Sentido proibido</b>   assinala ao condutor do veículo a obrigatoriedade de realizar o movimento indicado. </h1>
+        </div>
+       
+    </section>
+
+    <section>
+        <div style="text-align: center;">
+            <h2>4° Placa</h2>
+            <img src="proibidovirardireita.jpg" height="200px" width="200px"  ><h1> A <b >placa Proibido virar direita</b>   determina ao condutor do veículo a proibição de realizar o movimento de conversão à direita. </h1>
+        </div>
+       
+    </section>
+
+
+    <section>
+        <div style="text-align: center;">
+            <h2>5° Placa</h2>
+            <img src="proibidoviraresquerda.jpg" height="200px" width="200px"  ><h1> A <b >placa Proibido virar esquerda</b>  determina ao condutor do veículo a proibição de realizar o movimento de conversão à esquerda. </h1>
+        </div>
+       
+    </section>
+
+
+    <section>
+        <div style="text-align: center;">
+            <h2>6° Placa</h2>
+            <img src="proibidoretornaresquerda.png" height="200px" width="200px"  ><h1> A <b >placa Proido retornar a esquerda</b>  assinala ao condutor do veículo a proibição de retornar à esquerda. </h1>
+        </div>
+       
+    </section>
+
+    <section>
+        <div style="text-align: center;">
+            <h2>7° Placa</h2>
+            <img src="proibidoretornardireita.jpg" height="200px" width="200px"  ><h1> A <b >placa Proido retornar a esquerda</b>  assinala ao condutor do veículo a proibição de retornar à direita.  </h1>
+        </div>
+       
+    </section>
+
+    <section>
+        <div style="text-align: center;">
+            <h2>8° Placa</h2>
+            <img src="proibidoestacionar.jpg" height="200px" width="200px"  ><h1> A <b >placa Proibido estacionar</b>  assinala ao condutor de veículo que é proibido o estacionamento no trecho abrangido pela restrição. </h1>
+        </div>
+       
+    </section>
+
+    <section>
+        <div style="text-align: center;">
+            <h2>9° Placa</h2>
+            <img src="proibidoultrapasar.webp" height="200px" width="300px"  ><h1> A <b >placa  Proibido ultrapassar</b> sinaliza ao condutor do veículo que é a ultrapassagem no trecho regulamentado é proibida. </h1>
+        </div>
+       
+    </section>
+
+    <section>
+        <div style="text-align: center;">
+            <h2>10° Placa</h2>
+            <img src="sentidoduplo.webp" height="200px" width="200px"  ><h1> A <b >placa de Sentido duplo</b> é uma sinalização utilizada em vias de mão dupla para indicar que o sentido de circulação é bidirecional, ou seja, que os veículos podem trafegar em ambos os sentidos da via. </h1>
+        </div>
+       
+    </section>
+
+</article>
+
+<aside>
+    <h3>Atenção</h3>
+    <p>Dirigir atento evita acidentes</p>
+    </aside>
+    <footer>
+    <p>&copy; 2023 Todo cuidado com sinalização é pouco.</p>
+    </footer>
+
+</body>
+</html>
