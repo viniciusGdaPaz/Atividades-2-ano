@@ -1,0 +1,45 @@
+package execucao;
+
+import modelo.Animal;
+import modelo.Cachorro;
+import modelo.Gato;
+
+public class AnimalExec {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*
+		Animal animal = new Animal();
+		animal.setNome("Baby");
+		animal.setRaca("Coli");
+		System.out.println(animal.getDados());
+		*/
+		
+		Gato gato = new Gato();
+		gato.setNome("baby");
+		gato.setRaca("Coli");
+		System.out.println(gato.getDados());
+		gato.miar();
+	
+		Gato cat = new Gato();
+		cat.setNome("Garfield");
+		cat.setRaca("listrado");
+		System.out.println(cat.getDados());
+		cat.miar();
+		
+		Cachorro cachorro = new Cachorro();
+		cachorro.setNome("luna");
+		cachorro.setRaca("Maltes");
+		System.out.println(cachorro.getDados());
+		cachorro.latir();
+		
+		Cachorro dog = new Cachorro();
+		dog.setNome("Kiara");
+		dog.setRaca("Liasa");
+		System.out.println(dog.getDados());
+		dog.latir();
+		
+	}
+
+}
