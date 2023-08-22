@@ -86,9 +86,16 @@ public class PedidoExec {
 			
 		}
 		case 2: {
-			
+			Integer i ;
+			Integer in = pedidos.size()-1;
 			System.out.println(" Para cancelar, informe o indice do pedido:");
-			Integer i = Integer.parseInt(leitor.nextLine());
+			i = Integer.parseInt(leitor.nextLine());
+			
+			if((i-1)>in|| (i-1)<0) {
+				System.out.println("indice não encontrado , cheque  lista e tente novamente");
+				break;
+			}
+		
 			pedidos.remove(i-1);
 			
 			break;
@@ -96,6 +103,10 @@ public class PedidoExec {
 		
        case 3: {
     	   Integer n = 1;
+    	   if(pedidos.size()==0) {
+    		   System.out.println("nenhum pedido realizado");
+    		   break;
+    	   }
 			for(Pedido pc : pedidos) {
 				
 				System.out.println("O cliente "+ pc.getNomeCliente()+ ", foi atendido pelo garçom"
@@ -110,6 +121,11 @@ public class PedidoExec {
 		}
        case 4: {
     	   Double total = 0.00  ;
+    	   
+    	   if(pedidos.size()==0) {
+    		   System.out.println("nunhum pedido foi realizado ainda");
+    		   break;
+    	   }
     	   for(Pedido d : pedidos) {
     		   
     		   total = total + d.getPrato().getValor();
