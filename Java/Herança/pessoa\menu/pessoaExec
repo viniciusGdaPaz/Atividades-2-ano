@@ -1,0 +1,138 @@
+package execucao;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import modelo.Pessoa;
+import modelo.PessoaFisica;
+import modelo.PessoaJuridica;
+
+public class PessoaExec {
+
+	public static void main(String[] args) {
+		
+		List<Pessoa> pessoas = new ArrayList<>();
+		Scanner leitor = new Scanner(System.in);
+		
+		Integer escolha;
+do {
+	System.out.println("\n==========PESSOA==========");
+	System.out.println("(1)Cadastrar pessoa fisica");
+	System.out.println("(2)Cadastrar pessoa juridica");
+	System.out.println("(3)lista");
+	System.out.println("(4)Excluir");
+	System.out.println("(5)Sair");
+	System.out.println("==========================\n");
+	
+	escolha = Integer.parseInt(leitor.nextLine());
+	
+	switch (escolha) {
+	case 1: {
+		System.out.println("Cadastro:Pessoa Fisica\n");
+		PessoaFisica m = new PessoaFisica();
+		System.out.println("informe o nome da pessoa:");
+		m.setNome(leitor.nextLine());
+		System.out.println("informe a idade da pessoa:");
+		m.setIdade(Integer.parseInt(leitor.nextLine()));
+		System.out.println("Informe o cpf da pessao:");
+		m.setCpf(leitor.nextLine());
+		pessoas.add(m);
+	
+		
+		
+		break;
+	}
+	case 2:{
+		System.out.println("Cadastro:Pessoa Juridica\n");
+		PessoaJuridica j = new PessoaJuridica();
+		System.out.println("Informe o nome da pessoa:");
+		j.setNome(leitor.nextLine());
+		System.out.println("Informe o nome da pessoa fantasia:");
+		j.setNomeFantasia(leitor.nextLine());
+		System.out.println("Informe o cnpj da pessoa:");
+		j.setCnpj(leitor.nextLine());
+		pessoas.add(j);
+		
+		break;
+	}
+	case 3:{
+		System.out.println("Lista:Pessoas\n");
+		
+		if(pessoas.size() == 0) {
+			
+			System.out.println("não tem nada na lista");
+			break;
+		}
+		
+		for(Pessoa t : pessoas) {
+			
+			if( t instanceof PessoaJuridica) {
+				PessoaJuridica mt = (PessoaJuridica) t ;
+				System.out.println("\nPessoa Juridica(indice "+(pessoas.indexOf(t)+1)+") \n  nome:"+ mt.getNome()+" nome fantasia:"
+						+ " "+mt.getNomeFantasia()+" cnpj: "+mt.getCnpj());
+			}
+			
+			
+			if( t instanceof PessoaFisica) {
+				PessoaFisica ft = (PessoaFisica) t ;
+				System.out.println("\nPessoa Fisica(indíce "+(pessoas.indexOf(t)+1)+") \n  nome:"+ ft.getNome()+" idade:"
+						+ " "+ft.getIdade()+" cpf: "+ft.getCpf());
+			}
+		}
+		
+		
+	}
+	break;
+	case 4:{
+		System.out.println("Excluir;Pessoa\n");
+		
+		if(pessoas.size() == 0) {
+			System.out.println("Não tem nada na lista ");
+			break;
+		}
+		System.out.println("informe o indice que deseja excluir:");
+		Integer i  = Integer.parseInt(leitor.nextLine());
+		
+		 if((i-1)<0) {
+			System.out.println("esse indice não existe");
+			break;
+			
+		}
+		else if((pessoas.size()-1) <  (i-1)) {
+			System.out.println("não tem esse indice");
+			break;
+		}
+		
+		
+		
+		if((pessoas.size()-1)>-1) {
+			pessoas.remove(i-1);
+			System.out.println("pessoa removida \n");
+			
+		}
+		
+		break;
+	}
+	case 5:{
+		System.out.println("PROGRAMA ENCERRADO!!!!!!!!!!");
+	}
+	
+	
+	default:
+		System.out.println("opção invalida!!!!!!!!!!");
+	}
+	
+	
+	
+}while(escolha != 5);
+		
+		
+		 
+		 
+		  
+		
+		
+	}
+
+}
