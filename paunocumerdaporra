@@ -1,0 +1,75 @@
+create database db_universidade;
+
+
+use db_universidade;
+
+create table tb_Alunos(
+MAT int not null primary key,
+nome varchar(150) not null,
+endereco varchar(150) not null,
+cidade varchar(90) not null
+);
+
+create table tb_Disciplinas(
+COD_DISC char(30) not null primary key,
+nome_disc varchar(150) not null,
+carga_hor int not null
+);
+
+create table tb_Professores(
+COD_PROF int not null primary key,
+nome_prof varchar(150) not null,
+endereco_prof varchar(100) not null,
+cidade_prof varchar(80) not null
+);
+
+create table tb_Turma(
+COD_disc char(30),
+foreign key(COD_disc) references tb_Disciplinas(COD_DISC),
+COD_TURMA char(4) not null primary key,
+COD_prof int,
+foreign key(COD_prof) references tb_Professores(COD_PROF),
+ANO int,
+horario time
+);
+
+create table tb_Historico(
+MAT int,
+foreign key(MAT) references tb_Alunos(MAT),
+ANO int ,
+foreign key(ANO) references tb_Turma(ANO),
+COD_DISC char(30),
+foreign key(COD_DISC) references tb_Disciplina(COD_DISC),
+COD_Turma char(4),
+foreign key(COD_Turma) references tb_Turma(COD_TURMA),
+Cod_prof int,
+foreign key(Cod_prof) references tb_Professores(COD_PROF),
+frequencia int not null,
+nota char not null
+);
+
+insert into tb_Aluno(MAT, nome, enderecom, cidade) values
+(2015010101, "Jose de Alencar", "Rua das Almas", "Natal"),
+(2015010102, "João José ", "Avenida Ruy Carneiro", "João Pessoa"),
+(2015010103, "Maria JOaquina ", "Rua Carrossel", "Recife"),
+(2015010104, "Maria das Dores", "Rua das Ladeiras", "Fortaleza"),
+(2015010105, "Josué Claudino dos Santos", "Centro", "Natal"),
+(2015010106, "Josuélisson Claudino dos Santos", "Centro", "Natal");
+
+insert into tb_Disciplina(COD_DISC, nome_disc , carga_hor) value
+("BD", "Banco de Dados", 100),
+("POO", "Programação com Acesso a Banco de Dados", 100),
+("WEB", "Autoria", 50),
+("BD", "Engenharia de Software", 80);
+
+insert into tb_Professores(COD_PROF, nome_prof, endereco_prof, cidade_prof)value
+(212131,"Nickerson Ferreira", "Rua Manaiara", "João Pessoa" ),
+(122135,"Adorelson Bezerra", "Avenida Salgado filho", "Natal" ),
+(192011,"Diego Oliveira", "Avenida Roberto Freire", "Natal" );
+
+insert into tb_Turma(COD_disc, COD_TURMA, ANO, horario) value
+( "BD",1, 212131, 2023, 11 ),
+( "BD",2, 212131, 2023, 13 ),
+( "POO",1, 192111, 2023, 08 ),
+( "WEB",1, 192011, 2023, 07 ),
+( "ENG",1, 122135, 2023, 10 );
