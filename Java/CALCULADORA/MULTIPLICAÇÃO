@@ -1,0 +1,9 @@
+package modelo;
+
+public class Multiplicacao extends Calculadora{
+
+	public Double Calcular() {
+		return (numA*numB);
+	}
+
+}
