@@ -1,0 +1,10 @@
+package modelo;
+
+public class Divisao extends Calculadora{
+
+	
+	public Double Calcular() {
+		return (numA/numB);
+	}
+
+}
