@@ -1,0 +1,96 @@
+package execucao;
+
+import java.util.Scanner;
+
+import modelo.Calculadora;
+import modelo.Divisao;
+import modelo.Multiplicacao;
+import modelo.Resto;
+import modelo.Somar;
+import modelo.Subtracao;
+
+public class calculadoraExec {
+
+	public static void main(String[] args) {
+
+		
+		
+ Scanner leitor = new Scanner(System.in);		
+		
+ Double x = 1.00;		
+ Double A =0.0;
+ Double B = 0.0;
+ int y = 0;
+		
+ do {
+			
+					
+		System.out.println("+============CALCULADORA============+");
+		System.out.println("|     Execute: Soma(1)              |");
+		System.out.println("|     Execute: Subtração(2)         |");
+		System.out.println("|     Execute: Multiplicação(3)     |");
+		System.out.println("|     Execute: Divisão(4)           |");
+		System.out.println("|     Execute: Resto(5)             |");
+		System.out.println("|AVISO:para sair informe  valores=0 |");
+		System.out.println("|===================================|");
+		 y = Integer.parseInt(leitor.nextLine());
+		 
+		
+		 System.out.println("informe o primeiro numero:");
+		 A = (Double.parseDouble(leitor.nextLine()));
+		 
+		 System.out.println("informe o segundo numero:");
+		 B = (Double.parseDouble(leitor.nextLine()));
+		 x = A+B;
+		 
+		 
+		 Calculadora s = null;
+		 
+        switch (y) {
+				case 1: {
+						s = new Somar();
+						System.out.println("Somar:");
+						break;
+				}
+				
+				case 2: {
+						s = new Subtracao();
+						System.out.println("Subtrair:");	
+						break;
+					}
+				
+				case 3: {
+						 s = new Multiplicacao();
+							System.out.println("Multiplicar:");
+							break;
+					}
+				
+				case 4: {
+						 s = new Divisao();
+						System.out.println("Dividir:");
+						break;
+					}
+				
+				case 5: {
+						 s = new Resto();
+						System.out.println("Resto:");
+						break;
+					}
+				default:
+					System.out.println("Valor não encontrado");
+		}
+		 
+	s.setNumA(A);
+	s.setNumB(B);
+		
+    System.out.println("RESPOSTA: "+s.Calcular());
+					
+} while (x!=0);
+		
+ 
+ 
+System.out.println("Programa terminado");
+leitor.close();
+	}	
+}
+
