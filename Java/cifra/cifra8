@@ -1,0 +1,77 @@
+package modelo;
+
+public class CifraCesar8 extends CifraCesar {
+	
+	private Integer chave = 8;
+	
+	//Métodos
+	public String criptografar(String texto) {
+		String retorno = "";
+		
+		for(int i = 0; i<texto.length(); i++) {
+			char letra = texto.charAt(i);
+			Integer indice = this.alfabeto.indexOf(letra);
+			
+			if(indice>-1) {
+						if((indice+this.chave) > 26) {
+							int v= 0;
+							v = (indice+this.chave) - 26;
+							letra = this.alfabeto.charAt(v);
+							retorno += letra;
+							break;
+						}
+					
+				letra = this.alfabeto.charAt(indice + this.chave);
+				retorno += letra;
+				
+			}else {
+				retorno+=letra;
+			}
+		}
+					    	
+
+	return retorno;
+}
+		
+	
+	
+	public String descriptografar(String texto) {
+		String retorno = "";
+		
+
+		for(int i = 0; i<texto.length(); i++) {
+			char letra = texto.charAt(i);
+			Integer indice = this.alfabeto.indexOf(letra);
+			
+			if(indice>-1) {
+						if((indice-chave) < 0) {
+							int v= 0;
+							v = (chave-indice) ;
+							letra = this.alfabeto.charAt(26-v);
+							retorno += letra;
+							break;
+						}
+					
+				letra = this.alfabeto.charAt(indice - this.chave);
+				retorno += letra;
+				
+			}else {
+				retorno+=letra;
+			}
+		}
+		
+		
+		
+		return retorno;
+	}
+	
+	
+	public Integer getChave() {
+		return chave;
+	}
+	
+	public void setChave(Integer chave) {
+		this.chave = chave;
+	}
+
+}
