@@ -35,11 +35,10 @@ horario time
 
 alter table tb_Turma add index idx_ano (ANO);
 
-create table tb_Historico(
+create table tb_Historico(------------------------
 MAT int,
 foreign key(MAT) references tb_Alunos(MAT),
 ANO int ,
-
 COD_DISC char(30),
 foreign key(COD_DISC) references tb_Disciplinas(COD_DISC),
 COD_Turma char(4),
@@ -60,10 +59,10 @@ insert into tb_Alunos(MAT, nome, endereco, cidade) values
 (2015010106, "Josuélisson Claudino dos Santos", "Centro", "Natal");
 
 insert into tb_Disciplinas(COD_DISC, nome_disc , carga_hor) value
-("BD", "Banco de Dados", 100),
-("POO", "Programação com Acesso a Banco de Dados", 100),
-("WEB", "Autoria", 50),
-("ENG", "Engenharia de Software", 80);
+('BD', "Banco de Dados", 100),
+('POO', "Programação com Acesso a Banco de Dados", 100),
+('WEB', "Autoria Web", 50),
+('ENG', "Engenharia de Software", 80);
 
 insert into tb_Professores(COD_PROF, nome_prof, endereco_prof, cidade_prof)value
 (212131,"Nickerson Ferreira", "Rua Manaiara", "João Pessoa" ),
@@ -71,11 +70,11 @@ insert into tb_Professores(COD_PROF, nome_prof, endereco_prof, cidade_prof)value
 (192011,"Diego Oliveira", "Avenida Roberto Freire", "Natal" );
 
 insert into tb_Turma(COD_disc, COD_TURMA, COD_prof, ANO, horario) value
-( "BD",2, 212131, 2023, '13:14' ),
-( "POO",3, 122135, 2023, '08:10' ),
-( "WEB",4, 122135, 2023, '07:20' ),
-( "ENG",5, 192011, 2023, '10:50' );
-
+('BD', 1, 212131, 2023, '11:00'),
+('BD', 2, 212131, 2023, '13:00'),
+('POO', 3, 192011, 2023, '08:00'),
+('WEB', 4, 192011, 2023, '07:00'),
+('ENG', 5, 122135, 2023, '10:00');
 
 CREATE INDEX idx_mat ON tb_Alunos (MAT);
 
@@ -125,9 +124,12 @@ SET COD_DISC = 'PM',
     carga_hor = 150
 WHERE COD_DISC = 'BD';
 
-update tb_Disciplinas
-set COD_DISC = 'PM'
-WHERE COD_DISC='BD';
+delete from tb_Turma
+where COD_disc = 'BD';
+
+insert into tb_Turma(COD_disc, COD_TURMA, COD_prof, ANO, horario) value
+('PM', 1, 212131, 2023, '11:00'),
+('PM', 2, 212131, 2023, '13:00');
 
 UPDATE tb_Alunos
 SET nome = 'Erik'
@@ -165,3 +167,41 @@ WHERE COD_PROF = 122135;
 UPDATE tb_Professores
 SET nome = 'Sylvia'
 WHERE COD_PROF = '192011';
+
+
+insert into tb_Historico (MAT, COD_DISC, COD_Turma, Cod_prof, ANO, frequencia, nota) values
+(2015010101, 'PM', 1, 212131, 2023, 100, 'A'),
+(2015010101, 'POO', 3, 192011, 2023, 100, 'A'),
+(2015010101, 'WEB', 4, 192011, 2023, 100, 'A'),
+(2015010101, 'ENG', 5, 122135, 2023, 100, 'A'),
+
+(2015010102, 'PM', 2, 212131, 2023, 70, 'B'),
+(2015010102, 'POO', 3, 192011, 2023, 80, 'A'),
+(2015010102, 'WEB', 4, 192011, 2023, 75, 'B'),
+(2015010102, 'ENG', 5, 122135, 2023, 85, 'A'),
+
+(2015010103, 'PM', 2, 212131, 2023, 75, 'B'),
+(2015010103, 'POO', 3, 192011, 2023, 70, 'C'),
+(2015010103, 'WEB', 4, 192011, 2023, 85, 'A'),
+(2015010103, 'ENG', 5, 122135, 2023, 90, 'A'),
+
+(2015010104, 'PM', 1, 212131, 2023, 65, 'D'),
+(2015010104, 'POO', 3, 192011, 2023, 75, 'B'),
+(2015010104, 'WEB', 4, 192011, 2023, 70, 'C'),
+(2015010104, 'ENG', 5, 122135, 2023, 80, 'A'),
+
+(2015010105, 'PM', 1, 212131, 2023, 90, 'A'),
+(2015010105, 'POO', 3, 192011, 2023, 85, 'A'),
+(2015010105, 'WEB', 4, 192011, 2023, 70, 'B'),
+(2015010105, 'ENG', 5, 122135, 2023, 80, 'A'),
+
+(2015010106, 'PM', 2, 212131, 2023, 70, 'C'),
+(2015010106, 'POO', 3, 192011, 2023, 75, 'B'),
+(2015010106, 'WEB', 4, 192011, 2023, 85, 'A'),
+(2015010106, 'ENG', 5, 122135, 2023, 90, 'A');
+
+SELECT * FROM tb_Alunos;
+SELECT * FROM tb_Disciplinas;
+SELECT * FROM tb_Professores;
+SELECT * FROM tb_Turma;
+SELECT * FROM tb_Historico;
