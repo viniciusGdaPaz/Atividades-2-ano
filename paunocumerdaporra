@@ -26,20 +26,22 @@ cidade_prof varchar(80) not null
 create table tb_Turma(
 COD_disc char(30),
 foreign key(COD_disc) references tb_Disciplinas(COD_DISC),
-COD_TURMA char(4) not null primary key,
+COD_TURMA int not null primary key,
 COD_prof int,
 foreign key(COD_prof) references tb_Professores(COD_PROF),
-ANO int,
+ANO int ,
 horario time
 );
+
+alter table tb_Turma add index idx_ano (ANO);
 
 create table tb_Historico(
 MAT int,
 foreign key(MAT) references tb_Alunos(MAT),
 ANO int ,
-foreign key(ANO) references tb_Turma(ANO),
+
 COD_DISC char(30),
-foreign key(COD_DISC) references tb_Disciplina(COD_DISC),
+foreign key(COD_DISC) references tb_Disciplinas(COD_DISC),
 COD_Turma char(4),
 foreign key(COD_Turma) references tb_Turma(COD_TURMA),
 Cod_prof int,
@@ -47,8 +49,9 @@ foreign key(Cod_prof) references tb_Professores(COD_PROF),
 frequencia int not null,
 nota char not null
 );
+alter table tb_Historico add foreign key(ANO) references tb_Turma(ANO);
 
-insert into tb_Aluno(MAT, nome, enderecom, cidade) values
+insert into tb_Alunos(MAT, nome, endereco, cidade) values
 (2015010101, "Jose de Alencar", "Rua das Almas", "Natal"),
 (2015010102, "João José ", "Avenida Ruy Carneiro", "João Pessoa"),
 (2015010103, "Maria JOaquina ", "Rua Carrossel", "Recife"),
@@ -56,20 +59,109 @@ insert into tb_Aluno(MAT, nome, enderecom, cidade) values
 (2015010105, "Josué Claudino dos Santos", "Centro", "Natal"),
 (2015010106, "Josuélisson Claudino dos Santos", "Centro", "Natal");
 
-insert into tb_Disciplina(COD_DISC, nome_disc , carga_hor) value
+insert into tb_Disciplinas(COD_DISC, nome_disc , carga_hor) value
 ("BD", "Banco de Dados", 100),
 ("POO", "Programação com Acesso a Banco de Dados", 100),
 ("WEB", "Autoria", 50),
-("BD", "Engenharia de Software", 80);
+("ENG", "Engenharia de Software", 80);
 
 insert into tb_Professores(COD_PROF, nome_prof, endereco_prof, cidade_prof)value
 (212131,"Nickerson Ferreira", "Rua Manaiara", "João Pessoa" ),
 (122135,"Adorelson Bezerra", "Avenida Salgado filho", "Natal" ),
 (192011,"Diego Oliveira", "Avenida Roberto Freire", "Natal" );
 
-insert into tb_Turma(COD_disc, COD_TURMA, ANO, horario) value
-( "BD",1, 212131, 2023, 11 ),
-( "BD",2, 212131, 2023, 13 ),
-( "POO",1, 192111, 2023, 08 ),
-( "WEB",1, 192011, 2023, 07 ),
-( "ENG",1, 122135, 2023, 10 );
+insert into tb_Turma(COD_disc, COD_TURMA, COD_prof, ANO, horario) value
+( "BD",2, 212131, 2023, '13:14' ),
+( "POO",3, 122135, 2023, '08:10' ),
+( "WEB",4, 122135, 2023, '07:20' ),
+( "ENG",5, 192011, 2023, '10:50' );
+
+
+CREATE INDEX idx_mat ON tb_Alunos (MAT);
+
+
+CREATE INDEX idx_cod_disc ON tb_Disciplinas (COD_DISC);
+
+
+CREATE INDEX idx_cod_prof ON tb_Professores (COD_PROF);
+
+
+CREATE INDEX idx_cod_disc_turma ON tb_Turma (COD_disc);
+CREATE INDEX idx_cod_prof_turma ON tb_Turma (COD_prof);
+CREATE INDEX idx_ano_turma ON tb_Turma (ANO);
+
+
+CREATE INDEX idx_mat_historico ON tb_Historico (MAT);
+CREATE INDEX idx_cod_disc_historico ON tb_Historico (COD_DISC);
+CREATE INDEX idx_cod_turma_historico ON tb_Historico (COD_Turma);
+CREATE INDEX idx_cod_prof_historico ON tb_Historico (Cod_prof);
+CREATE INDEX idx_ano_historico ON tb_Historico (ANO);
+
+
+UPDATE tb_Professores
+SET nome_prof = 'Alana Cunha',
+    endereco_prof = 'Rua Petropolis',
+    cidade_prof = 'Medianeira'
+WHERE COD_PROF = 212131;
+
+
+UPDATE tb_Professores
+SET nome_prof = 'Carlos Eduardo Nobrega',
+    endereco_prof = 'Rua Macapa',
+    cidade_prof = 'Foz do Iguaçu'
+WHERE COD_PROF = 122135;
+
+update tb_Disciplinas
+set nome_disc = 'BANCO DE DADOS II'
+where nome_disc = 'Programação com Acesso a Banco de Dados';
+
+update tb_Disciplinas
+set nome_disc = ' DESENVOLVIMENTO MULTIMIDEA'
+where nome_disc = 'Autoria';
+
+UPDATE tb_Disciplinas
+SET COD_DISC = 'PM',
+    nome_disc = 'Programação Mobile',
+    carga_hor = 150
+WHERE COD_DISC = 'BD';
+
+update tb_Disciplinas
+set COD_DISC = 'PM'
+WHERE COD_DISC='BD';
+
+UPDATE tb_Alunos
+SET nome = 'Erik'
+WHERE MAT = 2015010101;
+
+UPDATE tb_Alunos
+SET nome = 'João'
+WHERE MAT = 2015010102;
+
+UPDATE tb_Alunos
+SET nome = 'Lucas'
+WHERE MAT = 2015010103;
+
+UPDATE tb_Alunos
+SET nome = 'Miriã'
+WHERE MAT = 2015010104;
+
+UPDATE tb_Alunos
+SET nome = 'Victor'
+WHERE MAT = 2015010105;
+
+UPDATE tb_Alunos
+SET nome = 'Vinicius'
+WHERE MAT = 2015010106;
+
+UPDATE tb_Professores
+SET nome = 'Joyce'
+WHERE COD_PROF = 212131;
+
+UPDATE tb_Professores
+SET nome = 'Jefferson'
+WHERE COD_PROF = 122135;
+
+
+UPDATE tb_Professores
+SET nome = 'Sylvia'
+WHERE COD_PROF = '192011';
