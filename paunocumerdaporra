@@ -35,13 +35,13 @@ horario time
 
 alter table tb_Turma add index idx_ano (ANO);
 
-create table tb_Historico(------------------------
+create table tb_Historico(
 MAT int,
 foreign key(MAT) references tb_Alunos(MAT),
 ANO int ,
 COD_DISC char(30),
 foreign key(COD_DISC) references tb_Disciplinas(COD_DISC),
-COD_Turma char(4),
+COD_Turma int,
 foreign key(COD_Turma) references tb_Turma(COD_TURMA),
 Cod_prof int,
 foreign key(Cod_prof) references tb_Professores(COD_PROF),
