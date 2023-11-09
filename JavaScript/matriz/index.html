@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas</title>
+    <script src="funcoes.js"></script>
+</head>
+<body>
+    <form name="frVendas">
+          <label for="cod">Códigos</label>
+          <input type="number" name="cod" id="cod" onblur="buscarProduto()">
+          <label for="Produto">Produtos</label>
+          <input type="text" id="produto" disabled>
+          <label for="qtd">Quantidade</label>
+          <input type="number" id="qtd" name="qtd">
+          <input type="button" value="incluir" onclick="incluir()">
+          <hr>
+           <table id="tabela" border=>
+
+           </table>
+    </form>
+
+</body>
+</html>
