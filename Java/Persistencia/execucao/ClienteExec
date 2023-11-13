@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import dao.ClienteDAO;
 import modelo.ClientePF;
+import modelo.ClientePJ;
 
 public class ClienteExec {
 
@@ -82,8 +83,28 @@ public class ClienteExec {
 		System.out.println("Cliente inserido com SUCESSO!!!!!");
 	}
 	
-	private static void inserirClientePJ(Scanner leitor) {
-		System.out.println("Inserir cliente PJ");
+	private static void inserirClientePJ(Scanner leitor) throws SQLException{
+		System.out.println("Inserir cliente PJ:\n");
+		ClientePJ cliPJ = new ClientePJ();
+		
+		System.out.println("informe o nome social:");
+		cliPJ.setNomeSocial(leitor.nextLine());
+		
+		System.out.println("informe o e-mail:");
+		cliPJ.setEmail(leitor.nextLine());
+		
+		System.out.println("Informe a razão social:");
+		cliPJ.setRazaoSocial(leitor.nextLine());
+		
+		System.out.println("informe a cnpj:");
+		cliPJ.setCnpj(leitor.nextLine());
+		
+		ClienteDAO CliDAO = new ClienteDAO();
+		CliDAO.inserirCliente(cliPJ);
+	
+		System.out.println("Cliente inserido com SUCESSO!!!!!");
+
+		
 	}
 	
 	private static void listarClientes() {
@@ -99,5 +120,4 @@ public class ClienteExec {
 	}
 
 }
-
 
