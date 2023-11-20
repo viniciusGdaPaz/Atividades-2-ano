@@ -37,5 +37,14 @@ public class ClientePJ extends Cliente {
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
+
+	@Override
+	public String getDados() {
+		String r = ("===============\n "+
+	                 "id:" + this.id+"\n tipo:"+this.getTipo()+"\n nome social:"+this.nomeSocial+"\n email:"+
+	                 this.email+"\n razão social:"+ this.razaoSocial+"\n CNPJ:"+this.cnpj+
+	                "\n===============");
+		return r;
+	}
 	
 }
