@@ -1,16 +1,21 @@
 package execucao;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import dao.ClienteDAO;
+import modelo.Cliente;
 import modelo.ClientePF;
 import modelo.ClientePJ;
 
 public class ClienteExec {
 
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) 
+			throws SQLException {
 		Scanner leitor = new Scanner(System.in);
+		
 		
 		Integer opcao = null;
 		do {
@@ -61,54 +66,69 @@ public class ClienteExec {
 	}
 
 	//Métodos
-	private static void inserirClientePF(Scanner leitor) throws SQLException {
-		System.out.println("Inserir cliente PF:\n");
+	private static void inserirClientePF(Scanner leitor) 
+			throws SQLException {
 		ClientePF cliPF = new ClientePF();
-		System.out.println("informe o nome social:");
+		
+		System.out.print("Informe o nome social: ");
 		cliPF.setNomeSocial(leitor.nextLine());
 		
-		System.out.println("informe o e-mail:");
+		System.out.print("Informe o e-mail: ");
 		cliPF.setEmail(leitor.nextLine());
 		
-		System.out.println("informe o nome:");
+		System.out.print("Informe o nome: ");
 		cliPF.setNomePF(leitor.nextLine());
 		
-		System.out.println("informe o CPF:");
+		System.out.print("Informe o CPF: ");
 		cliPF.setCpf(leitor.nextLine());
 		
-		//Persistir o objeto
-		ClienteDAO CliDAO = new ClienteDAO();
-		CliDAO.inserirCliente(cliPF);
+		//Persistir o Objeto - salvar no banco
+		ClienteDAO cliDAO = new ClienteDAO();
+		cliDAO.inserirCliente(cliPF);
 		
-		System.out.println("Cliente inserido com SUCESSO!!!!!");
+		System.out.println("Cliente Pessoa Física inserido com sucesso!");
 	}
 	
-	private static void inserirClientePJ(Scanner leitor) throws SQLException{
-		System.out.println("Inserir cliente PJ:\n");
+	private static void inserirClientePJ(Scanner leitor) 
+			throws SQLException {
+		//1- Ler os dados do cliente (Scanner) para o objeto
 		ClientePJ cliPJ = new ClientePJ();
 		
-		System.out.println("informe o nome social:");
+		System.out.print("Informe o nome social: ");
 		cliPJ.setNomeSocial(leitor.nextLine());
 		
-		System.out.println("informe o e-mail:");
+		System.out.print("Informe o e-mail: ");
 		cliPJ.setEmail(leitor.nextLine());
 		
-		System.out.println("Informe a razão social:");
+		System.out.print("Informe a razão social: ");
 		cliPJ.setRazaoSocial(leitor.nextLine());
 		
-		System.out.println("informe a cnpj:");
+		System.out.print("Informe o CNPJ: ");
 		cliPJ.setCnpj(leitor.nextLine());
 		
-		ClienteDAO CliDAO = new ClienteDAO();
-		CliDAO.inserirCliente(cliPJ);
-	
-		System.out.println("Cliente inserido com SUCESSO!!!!!");
-
+		//2- Criar o objeto ClienteDAO
+		ClienteDAO cliDAO = new ClienteDAO();		
 		
+		//3- Charmar o método do ClienteDAO para inserir o cliente
+		cliDAO.inserirCliente(cliPJ);
+		
+		System.out.println("Cliente Pessoa Jurídica inserido com sucesso!");		
 	}
 	
-	private static void listarClientes() {
+	private static void listarClientes() throws SQLException {
 		System.out.println("Listar clientes");
+		
+		ClienteDAO cliDAO = new ClienteDAO();
+		
+		List<Cliente> lista = cliDAO.listarClientes();
+		
+		
+		//percorrer a lista de clientes e exibi-los
+		
+		for(Cliente c : lista) {
+			System.out.println(c.getDados());
+		}
+		
 	}
 	
 	private static void buscarCliente(Scanner leitor) {
@@ -120,4 +140,3 @@ public class ClienteExec {
 	}
 
 }
-
