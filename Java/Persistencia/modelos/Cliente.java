@@ -11,6 +11,8 @@ public abstract class Cliente {
 	public abstract String getNroDoc();
 	public abstract String getTipo();
 	
+	public abstract String getDados();
+	
 	//GETs e SETs
 	public Integer getId() {
 		return id;
