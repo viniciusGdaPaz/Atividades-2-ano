@@ -17,6 +17,14 @@ public class ClientePF extends Cliente {
 	public String getTipo() {
 		return "F";
 	}
+	@Override
+	public String getDados() {
+		String r = ("===============\n "+
+	            "id:" + this.id+"tipo:"+this.getTipo()+"\n nome social:"+this.nomeSocial+"\n email:"+
+				this.email+"\n nome PF:" + this.nomePF+"\n CPF:"+this.cpf+
+				"\n==========");
+		return r;
+	}
 	
 	//GETs e SETs
 	public String getNomePF() {
@@ -31,5 +39,6 @@ public class ClientePF extends Cliente {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+
 	
 }
