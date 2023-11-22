@@ -1,0 +1,28 @@
+EXPRESSÕES:
+SELECT nome, preco, qtde_estoque, preco*qtde_estoque AS valor_estoque  FROM produtos;
+*o AS vai mudar o nome do quantidade_estoque*preço para valor_estoque
+mysql> SELECT nome, preco, qtde_estoque, preco*qtde_estoque AS valor_estoque  FROM produtos LIMIT 5 ;
+*LIMIT 5 mostra apenas 5 primeiros intens da lista
+mysql> SELECT nome, preco, qtde_estoque, preco*qtde_estoque AS valor_estoque  FROM produtos WHERE preco <= 999 LIMIT 5 ;
+*agora por causa do WHERE , so vai mostrar os que tem preço menor ou iguas a 999, os 5 primeiros que se enquadram nesta condição
+mysql> SELECT nome, preco, qtde_estoque, preco*qtde_estoque AS valor_estoque  FROM produtos WHERE produto_id IN(2, 7, 9, 10,11) LIMIT 5 ;
+*IN usado para escolhar os itens aonde o id é correspondente aos numeros ali, limit 5 não deixou aparecer o 11, ideal n usar o limit junto ja que o in ja serve para limitar
+mysql> SELECT nome, preco, qtde_estoque, preco*qtde_estoque AS valor_estoque  FROM produtos WHERE produto_id IN(2, 7, 9, 10,11)  ;
+
+
+mysql> SELECT nome, preco, qtde_estoque, preco*qtde_estoque AS valor_estoque  FROM produtos WHERE produto_id IN(2, 7, 9, 10,11) ORDER BY nome ;
+* ORDER BY nome deixou eles ordenados por ordem alfabetica(nome)
+ordem by ascendente , do menor para o maior
+
+
+mysql> SELECT nome, preco, qtde_estoque, preco*qtde_estoque AS valor_estoque  FROM produtos WHERE produto_id IN(2, 7, 9, 10,11) ORDER BY preco ;
+*ordena por preco, normalmente ASC ascendente , mais da pra fazer DESC 
+mysql> SELECT nome, preco, qtde_estoque, preco*qtde_estoque AS valor_estoque  FROM produtos WHERE produto_id IN(2, 7, 9, 10,11) ORDER BY preco DESC ;
+	
+	mysql> SELECT SUM(preco) FROM produtos;
+*some todos os preços, sem incluir quantidade de cada um
+mysql> SELECT SUM(preco*qtde_estoque) FROM produtos;
+*agora sim preço*quantidade
+
+mysql> SELECT AVG(preco),MIN(preco), MAX(preco) FROM produtos;
+*avg = media/ max= mais caro/ min= mais barato
