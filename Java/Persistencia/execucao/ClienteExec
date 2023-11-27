@@ -131,8 +131,25 @@ public class ClienteExec {
 		
 	}
 	
-	private static void buscarCliente(Scanner leitor) {
+	private static void buscarCliente(Scanner leitor) throws SQLException {
 		System.out.println("Buscar clientes");
+		Integer idb;
+		System.out.println("informe o id que deseja buscar:");
+		idb = Integer.parseInt(leitor.nextLine());
+		
+		
+		ClienteDAO cliDAO = new ClienteDAO();
+		
+		Cliente  cli = cliDAO.buscarid(idb);
+		
+		
+		if(cli != null) {
+		System.out.println(cli.getDados());
+		} else {
+			System.out.println("Cliente com id não existe");
+		}
+		
+		
 	}
 	
 	private static void excluirCliente(Scanner leitor) {
