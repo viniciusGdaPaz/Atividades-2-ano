@@ -98,6 +98,71 @@ public class ClienteDAO {
 	    		 }
 			return lista;
 	    	 }
+	     
+	     
+	     
+	     
+	     
+	     
+	     public Cliente buscarid(Integer idb) throws SQLException {
+	    	 
+	    	 String sql = "SELECT * FROM  clientes WHERE id = ?";
+	    			 
+	    	 
+	    	 Connection conn = Conexao.getConexao();
+	    	 PreparedStatement stm = conn.prepareStatement(sql);
+	    	//passar os parametros
+	    	 stm.setInt(1, idb);
+	    	 ResultSet rs =  stm.executeQuery();
+	    	 
+	    	 
+	    	//verificar se hoube retorno de registros
+	    	 if(rs.next()) {
+	    		 //criar o objeto cliente
+	               Cliente cliente = null;
+	    		 
+	    		 String tipoCliente = rs.getString("tipo");
+	    		 if(tipoCliente.equals("F"))
+	    			 cliente = new ClientePF();
+	    		 else if(tipoCliente.equals("J"))
+	    			 cliente = new ClientePJ();
+	    		 
+	    		 
+	    		 cliente.setId(rs.getInt("id"));
+	    		 cliente.setNomeSocial(rs.getString("nomeSocial"));
+	    		 cliente.setEmail(rs.getString("email"));
+	    		 
+	    		 if(cliente instanceof ClientePF) {
+	    			 ClientePF cliPF = (ClientePF) cliente;
+	    			 cliPF.setNomePF(rs.getString("nome"));
+	    			 cliPF.setCpf(rs.getString("cpf"));		 
+	    		 }else if(cliente instanceof ClientePJ) {
+	    			 ClientePJ cliPJ = (ClientePJ) cliente ;
+	    			 cliPJ.setRazaoSocial(rs.getString("razao_social"));
+	    			 cliPJ.setCnpj(rs.getString("cnpj"));
+	                                                    }
+	    		 
+	    		 return cliente;
+	    		 
+	    	 }
+	    	 return null;
 	     }
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     }
+
+
+
+
+  
+
+
+
 	
 	
