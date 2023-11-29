@@ -26,3 +26,42 @@ mysql> SELECT SUM(preco*qtde_estoque) FROM produtos;
 
 mysql> SELECT AVG(preco),MIN(preco), MAX(preco) FROM produtos;
 *avg = media/ max= mais caro/ min= mais barato
+
+
+
+
+
+SELECT p.nome, SUM(v.total) AS total_compras FROM clientes c JOIN vendas v ON c.cliente_id = v.cliente_id GROUP BY c.nome
+
+
+SELECT p.nome FROM produtos p WHERE NOT EXIST(SELECT*FROM itens_venda iv WHERE iv.produtos_id = p.produto_id);
+
+SELECT p.nome , SUM(iv.quantidade) AS total_vendido FROM produtos p JOIN itens_venda iv ON p.produto_id = iv.produto_id GROUP BY p.nome ORDER BY total_vendido DESC LIMIT 1;
+
+
+
+
+
+muda os valores
+UPDATE produtos SET qtde_estoque = 45 WHERE produto_id = 2;
+UPDATE produtos SET qtde_estoque = 26 WHERE produto_id = 7;
+ SELECT * FROM produtos;
+
+UPDATE produtos SET qtde_estoque = 17 WHERE produto_id = 11;
+ SELECT * FROM produtos;
+
+UPDATE produtos SET qtde_estoque = 10 WHERE produto_id = 23;
+ SELECT * FROM produtos;
+
+UPDATE produtos SET qtde_estoque = 7 WHERE produto_id = 37;
+ SELECT * FROM produtos;
+
+UPDATE produtos SET qtde_estoque = 33 WHERE produto_id = 44;
+ SELECT * FROM produtos;
+
+
+muda as datas
+UPDATE vendas SET data_venda = DATE_ADD('2022-10-01', INTERVAL FLOOR(RAND()*31) DAY);
+
+muda os id
+UPDATE vendas SET cliente_id = 3 WHERE total<=3500;
