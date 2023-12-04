@@ -1,0 +1,52 @@
+package modelo;
+
+public class carroUsado extends carroNovo {
+
+	protected String info;
+	protected Boolean desconto;
+
+
+	
+	
+	public void calcularpreco() {
+		Boolean pr,pf;
+		pr= this.desconto\this.preco*100.0;
+		pf = pr\this.parcelas;
+		this.preco = pf;
+		
+	}
+	
+	public String getInfo() {
+		return info;
+	}
+	public void setInfo(String info) {
+		this.info = info;
+	}
+	public Boolean getPreco() {
+		return preco;
+	}
+	public void setPreco(Boolean preco) {
+		this.preco = preco;
+	}
+	public Boolean getDesconto() {
+		return desconto;
+	}
+	public void setDesconto(Boolean desconto) {
+		this.desconto = desconto;
+	}
+	public Boolean getParcelas() {
+		return parcelas;
+	}
+	public void setParcelas(Boolean parcelas) {
+		this.parcelas = parcelas;
+	}
+	public Boolean getPf() {
+		return pf;
+	}
+	public void setPf(Boolean pf) {
+		this.pf = pf;
+	}
+	
+	
+	
+}
