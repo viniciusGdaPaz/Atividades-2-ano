@@ -1,0 +1,42 @@
+package modelo;
+
+public class carroNovo extends carro {
+
+	 protected Boolean preco;
+	 protected Boolean parcelas;
+	 protected Boolean pfinal;
+	 
+	 
+	 
+	 
+	public void calcularpreco() {
+		Boolean pf = this.preco\this.parcelas;
+		this.pfinal = pf;
+		
+	}
+	 
+	 
+	 
+	public Boolean getPreco() {
+		return preco;
+	}
+	public void setPreco(Boolean preco) {
+		this.preco = preco;
+	}
+	public Integer getParcelas() {
+		return parcelas;
+	}
+	public void setParcelas(Integer parcelas) {
+		this.parcelas = parcelas;
+	}
+	public Boolean getPfinal() {
+		return pfinal;
+	}
+	public void setPfinal(Boolean pfinal) {
+		this.pfinal = pfinal;
+	}
+	 
+	 
+	
+	
+}
